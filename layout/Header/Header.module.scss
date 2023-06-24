@@ -1,4 +1,59 @@
+@import "styles/mixins";
+@import "styles/vars";
+
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	
+	width: 100%;
+	
+	padding: 28px 0 28px;
+	
+	background: rgba(21, 36, 72, 0.20);
+	backdrop-filter: blur(125px);
+	
 	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		position: relative;
+	}
+	
+	&__nav {
+		width: 71%;
+		
+		@include media($media-full) {
+			width: 70%;
+		}
+	}
+	
+	&__list {
+		display: flex;
+		align-items: center;
+		
+		&-item {
+			display: inline-block;
+			
+			&:not(:last-child) {
+				margin-right: 48px;
+			}
+		}
+		
+		&:hover &-item:not(:hover) {
+			opacity: .5;
+			transition: all .3s ease;
+		}
+	}
+	
+	&__link {
+		@include font($font-family-lato, $fs-m, $fw-bold);
+		
+		&:hover {
+			color: $gray;
+			text-decoration: none;
+		}
 	}
 }

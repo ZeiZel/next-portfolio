@@ -1,0 +1,12 @@
+@mixin media ($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin font ($family, $size, $weight) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+	color: $gray;
+}

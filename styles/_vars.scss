@@ -1,3 +1,24 @@
+// font-family
 $font-family-lato: 'Lato', sans-serif;
 $font-family-montserrat: 'Montserrat', sans-serif;
 $font-family-raleway: 'Raleway', sans-serif;
+
+$fs-xl: 101px;
+$fs-l: 48px;
+$fs-tabs: 24px;
+$fs-m: 20px;
+$fs-s: 14px;
+
+$fw-bold: 700;
+$fw-semibold: 600;
+$fw-medium: 400;
+
+$primary: #06CAF9;
+$gray: #F2F2F2;
+$gradient: var(--gradient-blue, radial-gradient(2287.44% 169.84% at 100.00% -31.65%, #00C9FC 0%, #1A46EF 56.36%));
+
+// media
+$media-full: 1440px;
+$media-tablet: 1024px;
+$media-phone: 768px;
+$media-small: 320px;
