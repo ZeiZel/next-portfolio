@@ -12,12 +12,32 @@
 	max-width: 1408px;
 	padding: 0 17px;
 	margin: 0 auto;
+	
+	@include media($media-tablet) {
+		padding: 0 32px;
+	}
 }
 
 .sub-container {
 	max-width: 1174px;
 	padding: 0 17px;
 	margin: 0 auto;
+	
+	@include media($media-tablet) {
+		max-width: 833px;
+	}
+}
+
+@include media($media-phone) {
+	.sub-container, .container {
+		padding: 0 25px;
+	}
+}
+
+@include media($media-small) {
+	.sub-container, .container {
+		padding: 0 16px;
+	}
 }
 
 .overflow-hidden {

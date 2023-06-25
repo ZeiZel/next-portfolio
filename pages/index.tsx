@@ -11,11 +11,11 @@ function Home() {
 				<title>Портфолио</title>
 			</Head>
 			<main>
-				<About />
-				<Contact />
 				<Hero />
+				<About />
 				<Skills />
 				<Portfolio />
+				<Contact />
 			</main>
 			<div className='background-animation'>
 				<div id='ball-one'></div>

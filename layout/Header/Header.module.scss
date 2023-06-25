@@ -14,6 +14,14 @@
 	background: rgba(21, 36, 72, 0.20);
 	backdrop-filter: blur(125px);
 	
+	@include media($media-phone) {
+		padding: 24px 0;
+	}
+	
+	@include media($media-small) {
+		padding: 18px 0;
+	}
+	
 	&__container {
 		display: flex;
 		align-items: center;
@@ -28,17 +36,34 @@
 		@include media($media-full) {
 			width: 70%;
 		}
+		
+		@include media($media-tablet) {
+			width: 75%;
+		}
+		
+		@include media($media-phone) {
+			width: 83%;
+		}
 	}
 	
 	&__list {
 		display: flex;
 		align-items: center;
+		margin: 0;
 		
 		&-item {
 			display: inline-block;
 			
 			&:not(:last-child) {
 				margin-right: 48px;
+				
+				@include media($media-tablet) {
+					margin-right: 40px;
+				}
+				
+				@include media($media-tablet) {
+					margin-right: 32px;
+				}
 			}
 		}
 		
@@ -51,9 +76,144 @@
 	&__link {
 		@include font($font-family-lato, $fs-m, $fw-bold);
 		
+		@include media($media-tablet) {
+			font-size: 18px;
+		}
+		
 		&:hover {
 			color: $gray;
 			text-decoration: none;
 		}
 	}
 }
+
+.mobile {
+	&__list {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.menu {
+	position: absolute;
+	top: 54px;
+	left: 50%;
+	
+	padding: 0;
+	margin: 0;
+	
+	width: 100%;
+	height: 100vh;
+	
+	opacity: 0;
+	
+	transform: translateX(-50%);
+	
+	visibility: hidden;
+	list-style-type: none;
+	background: rgba(21, 36, 72, 1);
+	-webkit-backdrop-filter: blur(60px);
+	backdrop-filter: blur(60px);
+	
+	transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+	
+	&.open {
+		opacity: 1;
+		
+		visibility: visible;
+		
+		transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+	}
+	
+	&__item {
+		text-align: center;
+		
+		& a {
+			display: inline-flex;
+			
+			position: relative;
+			
+			padding: 5px 20px;
+			
+			font-size: 3em;
+			font-weight: 700;
+			text-decoration: none;
+			
+			color: #fff;
+		}
+	}
+}
+
+.burger__menu {
+	display: inline-block;
+	
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+	
+	width: 64px;
+	height: 30px;
+	
+	border: none;
+	
+	cursor: pointer;
+	
+	background-color: transparent;
+	
+	@include media($media-phone) {
+		height: 40px;
+	}
+	
+	span {
+		position: absolute;
+		
+		width: 100%;
+		height: 5px;
+		
+		border-radius: 2px;
+		
+		background: $gradient;
+		
+		transition: all .3s cubic-bezier(.8, .5, .2, 1.4);
+		
+		&:nth-child(1) {
+			top: 0;
+			left: 0;
+		}
+		
+		&:nth-child(2) {
+			top: 13px;
+			left: 0;
+			
+			opacity: 1;
+			
+			@include media($media-phone) {
+				top: 17px;
+			}
+		}
+		
+		&:nth-child(3) {
+			bottom: 0;
+			left: 0;
+		}
+	}
+	
+	&.open span {
+		&:nth-child(1) {
+			transform: rotate(45deg);
+			top: 13px;
+		}
+		
+		&:nth-child(2) {
+			transform: scale(0);
+			opacity: 0;
+		}
+		
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 13px;
+		}
+	}
+}
+
