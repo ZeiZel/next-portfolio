@@ -74,7 +74,10 @@
 	}
 	
 	&__link {
-		@include font($font-family-lato, $fs-m, $fw-bold);
+		
+		&-text {
+			font-weight: $fw-semibold;
+		}
 		
 		@include media($media-tablet) {
 			font-size: 18px;

@@ -1,0 +1,21 @@
+@import "styles/vars";
+
+.divider {
+	position: relative;
+	
+	&__img {
+		position: absolute;
+		top: -30px;
+		left: 0;
+	}
+	
+	&__line {
+		display: block;
+		
+		height: 3px;
+		
+		border: none;
+		
+		background: $gradient-title;
+	}
+}

@@ -4,15 +4,13 @@ import { Logo } from '@/components';
 import { Link } from 'react-scroll';
 import styles from './Header.module.scss';
 import { useMediaQuery } from '@/hooks';
-import { links } from '@/helpers';
+import { IS_MOBILE, links, ScrollSettings } from '@/helpers';
+import { Paragraph } from '@/components/ui';
 
 export const Header = () => {
-	const spy = true; // будет сохраняться место, до которого прокрутили страницу
-	const smooth = true; // плавный скролл
-	const offset = 140; // дальность прокрутки
-	const duration = 500; // длительность прокрутки
+	const { spy, smooth, offset, duration } = ScrollSettings;
 
-	const isMobile = useMediaQuery(640);
+	const isMobile = useMediaQuery(IS_MOBILE);
 
 	const [menuOpen, setMenuOpen] = useState(false);
 
@@ -74,7 +72,9 @@ export const Header = () => {
 									duration={duration}
 									className={styles.header__link}
 								>
-									{link.description}
+									<Paragraph className={styles['header__link-text']}>
+										{link.description}
+									</Paragraph>
 								</Link>
 							</li>
 						))}

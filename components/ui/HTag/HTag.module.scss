@@ -1,0 +1,18 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.h1 {
+	@include font($font-family-raleway, $fs-xl, $fw-bold);
+}
+
+.h2 {
+	@include font($font-family-raleway, $fs-l, $fw-bold);
+}
+
+.h3 {
+	@include font($font-family-raleway, $fs-ls, $fw-semibold);
+}
+
+.h4 {
+	@include font($font-family-raleway, $fs-tabs, $fw-semibold);
+}

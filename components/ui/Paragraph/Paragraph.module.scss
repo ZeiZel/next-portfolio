@@ -1,0 +1,20 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.p {
+	@include font($font-family-montserrat, $fs-m, $fw-medium);
+	line-height: 1.28;
+}
+
+.s {
+	@include font($font-family-montserrat, $fs-s, $fw-medium);
+}
+
+.m {
+
+}
+
+.l {
+	@include font($font-family-raleway, $fs-tabs, $fw-medium);
+}
+

@@ -5,9 +5,10 @@ $font-family-raleway: 'Raleway', sans-serif;
 
 $fs-xl: 101px;
 $fs-l: 48px;
+$fs-ls: 36px;
 $fs-tabs: 24px;
 $fs-m: 20px;
-$fs-s: 14px;
+$fs-s: 16px;
 
 $fw-bold: 700;
 $fw-semibold: 600;
@@ -15,7 +16,9 @@ $fw-medium: 400;
 
 $primary: #06CAF9;
 $gray: #F2F2F2;
-$gradient: var(--gradient-blue, radial-gradient(2287.44% 169.84% at 100.00% -31.65%, #00C9FC 0%, #1A46EF 56.36%));
+$gradient: radial-gradient(100% 2000.84% at 100% -31.65%, #00C9FC 0%, #1A46EF 56.36%);
+$gradient-hover: radial-gradient(100% 2000.84% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+$gradient-title: linear-gradient(79deg, #00D1FF 0%, rgba(255, 34, 141, 0.00) 100%);
 
 // media
 $media-full: 1440px;

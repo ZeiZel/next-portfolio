@@ -1,0 +1,138 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.bg {
+	background: url("/bg.png") center/cover no-repeat;
+	
+	&__mobile {
+		background: url("/phone-bg.png") center/cover no-repeat;
+	}
+	
+	&__none {
+		background: none;
+	}
+}
+
+.person {
+	position: relative;
+	
+	height: 100vh;
+	
+	padding-top: 150px;
+	
+	margin-bottom: 100px;
+	
+	@include media($media-phone) {
+		padding-top: 110px;
+		height: 50vh;
+	}
+	
+	@include media($media-small) {
+		padding-top: 100px;
+	}
+	
+	&__title {
+		margin-bottom: 89px;
+		
+		--hue: 0;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke-width: 4px;
+		-webkit-text-stroke-color: hsl(var(--hue), 50%, 95%);
+		text-shadow: 0 0 15px hsl(var(--hue), 60%, 90%, .80),
+		0 0 20px hsl(var(--hue), 70%, 80%, .85),
+		0 0 40px hsl(var(--hue), 80%, 70%, .90),
+		0 0 60px hsl(var(--hue), 90%, 60%, .95),
+		0 0 80px hsl(var(--hue), 100%, 50%, 1);
+		
+		@include media($media-full) {
+			margin-bottom: 110px;
+		}
+		
+		@include media($media-tablet) {
+			font-size: 72px !important;
+			margin-bottom: 82px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 52px !important;
+			margin-bottom: 57px;
+		}
+		
+		@include media($media-small) {
+			font-size: 42px !important;
+		}
+	}
+	
+	&__description {
+		max-width: 485px;
+		margin-bottom: 84px;
+		
+		@include media($media-full) {
+			margin-bottom: 82px;
+		}
+		
+		@include media($media-tablet) {
+			max-width: 395px;
+			font-size: 20px !important;
+			margin-bottom: 65px;
+		}
+		
+		@include media($media-phone) {
+			max-width: 355px;
+		}
+		
+		@include media($media-small) {
+		}
+	}
+	
+	&__link {
+		display: inline-block;
+		padding: 16px 32px;
+		
+		border-radius: 4px;
+		background: $gradient;
+		
+		cursor: pointer;
+		transition: all .5s ease;
+		
+		@include media($media-full) {
+			padding: 25px 49px;
+		}
+		
+		@include media($media-tablet) {
+			padding: 25px 37px;
+		}
+		
+		@include media($media-phone) {
+			padding: 15px 8px;
+		}
+		
+		&:hover {
+			background: $gradient-hover;
+			transition: all .5s ease;
+		}
+		
+		&-text {
+			font-weight: $fw-semibold;
+			text-align: center;
+		}
+	}
+	
+	&__arrow {
+		position: absolute;
+		bottom: 32px;
+		left: 50%;
+		
+		width: 48px;
+		height: 56px;
+		
+		background: url("/arrow-down.png") center/cover no-repeat;
+		
+		transform: translate(-50%, 0);
+		cursor: pointer;
+		
+		@include media($media-tablet) {
+			bottom: 100px;
+		}
+	}
+}

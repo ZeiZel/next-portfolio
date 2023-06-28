@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import Head from 'next/head';
 import { withLayout } from '@/layout/Layout';
-import { Contact, Hero, About, Skills, Portfolio } from '@/components';
+import { Contact, Person, About, Skills, Portfolio } from '@/components';
 
 function Home() {
 	return (
@@ -11,7 +11,7 @@ function Home() {
 				<title>Портфолио</title>
 			</Head>
 			<main>
-				<Hero />
+				<Person />
 				<About />
 				<Skills />
 				<Portfolio />
