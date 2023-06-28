@@ -4,6 +4,10 @@
 .about {
 	margin-bottom: 100px;
 	
+	@include media($media-phone) {
+		margin-bottom: 50px;
+	}
+	
 	&__title {
 		margin-bottom: 100px;
 	}
@@ -29,6 +33,10 @@
 	
 	&__name {
 		margin-bottom: 16px;
+		
+		@include media($media-phone) {
+			font-size: 36px;
+		}
 	}
 	
 	&__divider {
@@ -38,5 +46,9 @@
 	&__description {
 		max-width: 553px;
 		margin-bottom: 56px;
+		
+		@include media($media-phone) {
+			font-size: 20px;
+		}
 	}
 }

@@ -8,7 +8,7 @@ export const Skills = () => {
 	return (
 		<section id={'skills'} className={styles.skills}>
 			<div className='container'>
-				<MainTitle>Навыки</MainTitle>
+				<MainTitle className={styles.skills__title}>Навыки</MainTitle>
 				<div className='sub-container'>
 					<div className={styles.skills__block}>
 						<SkillsList skills={skillsList} />

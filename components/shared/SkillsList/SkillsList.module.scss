@@ -1,0 +1,45 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.skills {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	gap: 100px 30px;
+	
+	@include media($media-phone) {
+		grid-template-columns: 1fr;
+	}
+	
+	&__item {}
+	
+	&__block {
+		width: 70%;
+	}
+	
+	&__title {
+		display: flex;
+		flex-direction: row;
+		
+		margin-bottom: 10px;
+		
+		&-text {}
+	}
+	
+	&__description {
+		color: $muted;
+	}
+	
+	&__img {
+		display: inline-block;
+		
+		margin-right: 16px;
+	}
+	
+	&__divider {
+		width: 100%;
+		
+		margin-bottom: 20px;
+	}
+}
