@@ -1,1 +1,42 @@
-.about {}
+@import "styles/vars";
+@import "styles/mixins";
+
+.about {
+	margin-bottom: 100px;
+	
+	&__title {
+		margin-bottom: 100px;
+	}
+	
+	&__block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+		
+		margin-bottom: 40px;
+		
+		@include media($media-phone) {
+			flex-direction: column;
+		}
+	}
+	
+	&__img {
+	}
+	
+	&__section {
+	}
+	
+	&__name {
+		margin-bottom: 16px;
+	}
+	
+	&__divider {
+		margin-bottom: 56px;
+	}
+	
+	&__description {
+		max-width: 553px;
+		margin-bottom: 56px;
+	}
+}
