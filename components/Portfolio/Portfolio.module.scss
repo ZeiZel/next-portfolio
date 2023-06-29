@@ -1,0 +1,14 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.portfolio {}
+
+.tab {
+	&__title {
+		color: $muted;
+		
+		&.active {
+			color: $gray;
+		}
+	}
+}
