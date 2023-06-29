@@ -18,16 +18,16 @@ export const hiddenPortfolioItemsArray: IPortfolioTabItem[] = [
 ];
 
 export const portfolioItems1: IPortfolioTabItem[] = [
+	{ id: 2, img: '/img/portfolio-2.png', link: '#', title: 'Лендинг «Гитары»' },
 	{
 		id: 1,
 		img: '/img/portfolio-1.png',
 		link: '#',
 		title: 'Интернет магазин ООО «Волго-Вятский Монетный Двор»',
 	},
-	{ id: 2, img: '/img/portfolio-2.png', link: '#', title: 'Лендинг «Гитары»' },
 	{ id: 3, img: '/img/portfolio-3.png', link: '#', title: 'Лендинг «LoftHouse»' },
-	{ id: 4, img: '/img/portfolio-1.png', link: '#', title: 'Обучающая платформа «Бризли»' },
 	{ id: 5, img: '/img/portfolio-2.png', link: '#', title: 'Интернет магазин «Цифровой»' },
+	{ id: 4, img: '/img/portfolio-1.png', link: '#', title: 'Обучающая платформа «Бризли»' },
 	{ id: 6, img: '/img/portfolio-3.png', link: '#', title: 'Сайт грузоперевозок «Сервис»' },
 ];
 
@@ -38,10 +38,10 @@ export const portfolioItems2: IPortfolioTabItem[] = [
 		link: '#',
 		title: 'Интернет магазин ООО «Волго-Вятский Монетный Двор»',
 	},
+	{ id: 5, img: '/img/portfolio-2.png', link: '#', title: 'Интернет магазин «Цифровой»' },
 	{ id: 2, img: '/img/portfolio-2.png', link: '#', title: 'Лендинг «Гитары»' },
 	{ id: 3, img: '/img/portfolio-3.png', link: '#', title: 'Лендинг «LoftHouse»' },
 	{ id: 4, img: '/img/portfolio-1.png', link: '#', title: 'Обучающая платформа «Бризли»' },
-	{ id: 5, img: '/img/portfolio-2.png', link: '#', title: 'Интернет магазин «Цифровой»' },
 	{ id: 6, img: '/img/portfolio-3.png', link: '#', title: 'Сайт грузоперевозок «Сервис»' },
 ];
 
@@ -52,11 +52,11 @@ export const portfolioItems3: IPortfolioTabItem[] = [
 		link: '#',
 		title: 'Интернет магазин ООО «Волго-Вятский Монетный Двор»',
 	},
+	{ id: 6, img: '/img/portfolio-3.png', link: '#', title: 'Сайт грузоперевозок «Сервис»' },
 	{ id: 2, img: '/img/portfolio-2.png', link: '#', title: 'Лендинг «Гитары»' },
 	{ id: 3, img: '/img/portfolio-3.png', link: '#', title: 'Лендинг «LoftHouse»' },
 	{ id: 4, img: '/img/portfolio-1.png', link: '#', title: 'Обучающая платформа «Бризли»' },
 	{ id: 5, img: '/img/portfolio-2.png', link: '#', title: 'Интернет магазин «Цифровой»' },
-	{ id: 6, img: '/img/portfolio-3.png', link: '#', title: 'Сайт грузоперевозок «Сервис»' },
 ];
 
 export const portfolioItems4: IPortfolioTabItem[] = [

@@ -1,14 +1,91 @@
 @import "styles/vars";
 @import "styles/mixins";
 
-.portfolio {}
+.portfolio {
+	margin-bottom: 100px;
+	
+	&__title {
+		margin-bottom: 100px;
+	}
+	
+	&__list {
+		display: flex;
+		flex-direction: row;
+		
+		margin-bottom: 56px;
+	}
+	
+	&__additional {
+		display: flex;
+		justify-content: flex-end;
+		
+		&-button {}
+		
+		&-text {
+			color: $muted;
+			transition: all .2s ease-in-out;
+			
+			&:hover {
+				color: $gray;
+			}
+		}
+	}
+}
 
 .tab {
+	
+	&:not(:last-child) {
+		margin-right: 58px;
+	}
+	
+	&__item {
+	
+	}
+	
 	&__title {
+		margin-bottom: 16px;
+		
 		color: $muted;
 		
 		&.active {
 			color: $gray;
 		}
+	}
+	
+	&__divider {
+	
+	}
+}
+
+.content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 64px 32px;
+	
+	margin-bottom: 56px;
+	
+	list-style-type: none;
+}
+
+.item {
+	&__link {
+	
+	}
+	
+	&__img {
+		margin-bottom: 32px;
+		overflow: hidden;
+		
+		img {
+			transition: all .3s ease-in-out;
+			
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+	
+	&__title {
+	
 	}
 }

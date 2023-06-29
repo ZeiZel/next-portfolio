@@ -9,19 +9,20 @@ export const skillsList: ISkillItem[] = [
 	{
 		id: '1',
 		name: 'Веб-Разработка',
-		description: 'Javascript, WebStorm.',
+		description:
+			'JavaScript, TypeScript, WebStorm, ООП, Паттерны, Модульность, WebSocket, Webpack.',
 		img: '/web-dev.svg',
 	},
 	{
 		id: '2',
 		name: 'Разработка Frontend',
-		description: 'HTML, CSS, SASS, Bootstrap, AngularJS, Vue, React, NextJS',
+		description: 'HTML, CSS, SASS, TailwindCSS, Bootstrap, React, NextJS',
 		img: '/frontend.svg',
 	},
 	{
 		id: '3',
 		name: 'Разработка Backend',
-		description: 'Node.js, NestJS, MongoDB, Redis, PostgreSQL, MS SQL',
+		description: 'NodeJS, NestJS, MongoDB, Redis, PostgreSQL, MS SQL',
 		img: '/backend.svg',
 	},
 	{

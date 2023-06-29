@@ -16,7 +16,7 @@ export const TabControl = ({ isActive, title, handleShowTab }: ITabControlProps)
 				>
 					{title}
 				</HTag>
-				<Divider className={styles.tab__divider} arrow={isActive} />
+				<Divider className={styles.tab__divider} muted={!isActive} arrow={isActive} />
 			</button>
 		</li>
 	);
