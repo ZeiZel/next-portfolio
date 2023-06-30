@@ -6,6 +6,20 @@
 	
 	&__title {
 		margin-bottom: 100px;
+		
+		@include media($media-tablet) {
+			font-size: 36px;
+			margin-bottom: 88px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 24px;
+			margin-bottom: 56px;
+		}
+		
+		@include media($media-small) {
+			margin-bottom: 48px;
+		}
 	}
 	
 	&__list {
@@ -13,13 +27,21 @@
 		flex-direction: row;
 		
 		margin-bottom: 56px;
+		
+		@include media($media-phone) {
+			height: 100px;
+			
+			overflow: scroll;
+			overflow-y: hidden;
+		}
 	}
 	
 	&__additional {
 		display: flex;
 		justify-content: flex-end;
 		
-		&-button {}
+		&-button {
+		}
 		
 		&-text {
 			color: $muted;
@@ -30,12 +52,35 @@
 			}
 		}
 	}
+	
+	&__slider {
+		margin-left: 11%;
+		
+		overflow: hidden;
+		
+		@include media($media-phone) {
+			margin-left: 3%;
+		}
+		
+		&-block {
+			overflow-x: auto;
+		}
+	}
 }
 
 .tab {
+	min-width: 120px;
 	
 	&:not(:last-child) {
 		margin-right: 58px;
+		
+		@include media($media-tablet) {
+			margin-right: 48px;
+		}
+		
+		@include media($media-phone) {
+			margin-right: 15px;
+		}
 	}
 	
 	&__item {
@@ -46,6 +91,14 @@
 		margin-bottom: 16px;
 		
 		color: $muted;
+		
+		@include media($media-tablet) {
+			font-size: 22px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 18px;
+		}
 		
 		&.active {
 			color: $gray;
@@ -87,5 +140,53 @@
 	
 	&__title {
 	
+	}
+}
+
+.slider {
+	&__item {
+		position: relative;
+		
+		width: calc(100% - 24px);
+		
+		border-radius: 4px;
+		
+		overflow: hidden;
+		
+		@include media($media-phone) {
+			width: calc(100% - 13px);
+		}
+	}
+	
+	&__blur {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		
+		padding: 16px 8px;
+		
+		background: $bg-blur;
+		backdrop-filter: blur(50px);
+	}
+	
+	&__title {
+		@include media($media-tablet) {
+			font-size: 24px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 18px;
+		}
+		
+		@include media($media-small) {
+			font-size: 16px;
+		}
+	}
+	
+	&__link {
+	}
+	
+	&__img {
 	}
 }

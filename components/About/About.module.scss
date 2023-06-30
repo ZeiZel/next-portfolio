@@ -10,6 +10,20 @@
 	
 	&__title {
 		margin-bottom: 100px;
+		
+		@include media($media-tablet) {
+			font-size: 36px;
+			margin-bottom: 88px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 24px;
+			margin-bottom: 56px;
+		}
+		
+		@include media($media-small) {
+			margin-bottom: 48px;
+		}
 	}
 	
 	&__block {

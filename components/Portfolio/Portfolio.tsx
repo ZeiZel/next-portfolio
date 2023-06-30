@@ -5,14 +5,19 @@ import { TabControl } from './TabControl/TabControl';
 import { TabContent } from './TabContent/TabContent';
 import {
 	hiddenPortfolioItemsArray,
+	IS_TABLET,
 	portfolioItems1,
 	portfolioItems2,
 	portfolioItems3,
 	portfolioItems4,
 } from '@/helpers';
 import { AnimatePresence } from 'framer-motion';
+import { useMediaQuery } from '@/hooks';
+import { Slider } from '@/components/Portfolio/Slider/Slider';
 
 export const Portfolio = () => {
+	const isTablet = useMediaQuery(IS_TABLET);
+
 	const [portfolioWeb, setPortfolioWeb] = useState<boolean>(true);
 	const [portfolioUiUx, setPortfolioUiUx] = useState<boolean>(false);
 	const [portfolioFront, setPortfolioFront] = useState<boolean>(false);
@@ -73,34 +78,48 @@ export const Portfolio = () => {
 							/>
 						))}
 					</ul>
-					<div className={styles.portfolio__items}>
-						{portfolioWeb && <TabContent tabItems={portfolioItems1} />}
-						{portfolioUiUx && <TabContent tabItems={portfolioItems2} />}
-						{portfolioFront && <TabContent tabItems={portfolioItems3} />}
-						{portfolioAll && <TabContent tabItems={portfolioItems4} />}
-						<AnimatePresence>
-							{!hiddenPortfolioItems && (
-								<TabContent tabItems={hiddenPortfolioItemsArray} />
-							)}
-						</AnimatePresence>
-					</div>
-					<div className={styles['portfolio__additional']}>
-						<button
-							className={styles['portfolio__additional-button']}
-							onClick={toggleHiddenPortfolioItems}
-						>
-							<Paragraph className={styles['portfolio__additional-text']}>
-								{hiddenPortfolioItems ? 'Показать ещё' : 'Скрыть'}
-							</Paragraph>
-							<Divider
-								className={styles['portfolio__additional-border']}
-								arrow={false}
-								muted={true}
-							/>
-						</button>
-					</div>
+					{!isTablet && (
+						<div>
+							<div className={styles.portfolio__items}>
+								{portfolioWeb && <TabContent tabItems={portfolioItems1} />}
+								{portfolioUiUx && <TabContent tabItems={portfolioItems2} />}
+								{portfolioFront && <TabContent tabItems={portfolioItems3} />}
+								{portfolioAll && <TabContent tabItems={portfolioItems4} />}
+								<AnimatePresence>
+									{!hiddenPortfolioItems && (
+										<TabContent tabItems={hiddenPortfolioItemsArray} />
+									)}
+								</AnimatePresence>
+							</div>
+							<div className={styles['portfolio__additional']}>
+								<button
+									className={styles['portfolio__additional-button']}
+									onClick={toggleHiddenPortfolioItems}
+								>
+									<Paragraph className={styles['portfolio__additional-text']}>
+										{hiddenPortfolioItems ? 'Показать ещё' : 'Скрыть'}
+									</Paragraph>
+									<Divider
+										className={styles['portfolio__additional-border']}
+										arrow={false}
+										muted={true}
+									/>
+								</button>
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
+			{isTablet && (
+				<div className={styles.portfolio__slider}>
+					<div className={styles['portfolio__slider-block']}>
+						{portfolioWeb && <Slider tabItems={portfolioItems1} />}
+						{portfolioUiUx && <Slider tabItems={portfolioItems2} />}
+						{portfolioFront && <Slider tabItems={portfolioItems3} />}
+						{portfolioAll && <Slider tabItems={portfolioItems4} />}
+					</div>
+				</div>
+			)}
 		</section>
 	);
 };
