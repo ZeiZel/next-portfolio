@@ -1,0 +1,29 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.input {
+	display: flex;
+	flex-direction: column;
+	
+	&__text {
+		margin-bottom: 8px;
+	}
+	
+	&__item {
+		@include font($font-family-montserrat, $fs-m, $fw-medium);
+	
+		width: 555px;
+		height: 76px;
+		
+		margin-bottom: 32px;
+		
+		padding: 24px;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 4px;
+		background: none;
+		
+		&::placeholder {
+			@include font($font-family-montserrat, $fs-m, $fw-medium);
+		}
+	}
+}

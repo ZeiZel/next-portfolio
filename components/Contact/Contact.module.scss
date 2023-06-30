@@ -1,0 +1,61 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.contact {
+	margin-bottom: 100px;
+	
+	&__title {
+		margin-bottom: 100px;
+	}
+	
+	&__block {
+		display: flex;
+		gap: 32px;
+	}
+	
+	&__description {
+		display: flex;
+		justify-content: space-between;
+		align-content: space-between;
+		flex-direction: column;
+		
+		padding-top: 20px;
+	}
+	
+	&__form {}
+	
+	&__text {
+		margin-bottom: 60px;
+		
+		p {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.form {
+	&__button {
+		width: 555px;
+		
+		padding: 16px 48px;
+		
+		background: $gradient;
+		
+		transition: all .2s ease-in-out;
+		
+		&:hover {
+			transition: all .2s ease-in-out;
+			background: $gradient-hover;
+		}
+	}
+	
+	&__label {}
+	
+	&__checkbox {}
+	
+	&__description {
+		@include font($font-family-montserrat, $fs-s, $fw-medium);
+		line-height: 1.28;
+		color: #B7BFD1;
+	}
+}
