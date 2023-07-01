@@ -1,2 +1,2 @@
 export * from './SocialList/SocialList';
-export * from './SkillItem/SkillItem';
+export * from './SkillsList/SkillsList';

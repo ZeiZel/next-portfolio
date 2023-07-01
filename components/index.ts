@@ -3,6 +3,7 @@ export * from './About/About';
 export * from './Person/Person';
 export * from './Skills/Skills';
 export * from './Portfolio/Portfolio';
+export * from './PolicyContent/PolicyContent';
 export * from './Logo/Logo';
-export * from '@/components/shared/SocialList/SocialList';
+export * from '@/components/shared';
 export * from './ui';

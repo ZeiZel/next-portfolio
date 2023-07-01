@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { format } from 'date-fns';
 import styles from './Footer.module.scss';
 import { Divider, Logo, Paragraph, SocialList } from '@/components';
-import { socialLinks, SocialLinks } from '@/helpers';
+import { privacyLinks, SocialLinks } from '@/helpers';
 import Link from 'next/link';
 
 export const Footer = () => {
@@ -29,7 +29,7 @@ export const Footer = () => {
 							</div>
 						</div>
 						<div className={styles['footer__right-bottom']}>
-							{socialLinks.map((link) => (
+							{privacyLinks.map((link) => (
 								<Paragraph key={link.id} size={'s'}>
 									<Link href={link.link}>{link.text}</Link>
 								</Paragraph>

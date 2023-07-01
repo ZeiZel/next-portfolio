@@ -1,6 +1,7 @@
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import NextProgress from 'nextjs-progressbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<link rel='icon' type='img/svg' sizes='32x32' href='logo.svg' />
 			</Head>
+			<NextProgress />
 			<Component {...pageProps} />
 			<ToastContainer
 				position={'bottom-right'}
