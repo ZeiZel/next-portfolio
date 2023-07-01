@@ -6,11 +6,40 @@
 	
 	&__title {
 		margin-bottom: 100px;
+		
+		@include media($media-tablet) {
+			font-size: 36px;
+			margin-bottom: 88px;
+		}
+		
+		@include media($media-phone) {
+			font-size: 24px;
+			margin-bottom: 56px;
+		}
+		
+		@include media($media-small) {
+			margin-bottom: 48px;
+		}
 	}
 	
 	&__block {
 		display: flex;
 		gap: 32px;
+		
+		@include media($media-tablet) {
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 40px;
+		}
+		
+		@include media($media-phone) {
+		
+		}
+		
+		@include media($media-small) {
+		
+		}
 	}
 	
 	&__description {
@@ -22,10 +51,16 @@
 		padding-top: 20px;
 	}
 	
-	&__form {}
+	&__form {
+	}
 	
 	&__text {
 		margin-bottom: 60px;
+		
+		@include media($media-phone) {
+			font-size: 20px;
+		}
+		
 		
 		p {
 			margin-bottom: 20px;
@@ -34,10 +69,22 @@
 }
 
 .form {
+	@include media($media-tablet) {
+	}
+	
+	@include media($media-phone) {
+		width: 100%;
+	}
+	
+	@include media($media-small) {
+	
+	}
+	
 	&__button {
 		width: 555px;
 		
 		padding: 16px 48px;
+		margin-bottom: 43px;
 		
 		background: $gradient;
 		
@@ -47,15 +94,84 @@
 			transition: all .2s ease-in-out;
 			background: $gradient-hover;
 		}
+		
+		&:disabled {
+			background: $dark-gray;
+		}
+		
+		@include media($media-phone) {
+			width: 100%;
+		}
+		
+		&-text {
+			@include font($font-family-montserrat, $fs-m, $fw-bold);
+		}
 	}
 	
-	&__label {}
+	&__label {
+		display: flex;
+		
+		position: relative;
+		
+		cursor: pointer;
+	}
 	
-	&__checkbox {}
+	&__checkbox {
+		position: absolute;
+		opacity: 0;
+	}
+	
+	&__checkbox + &__span::before {
+		content: '';
+		display: inline-block;
+		
+		width: 24px;
+		height: 24px;
+		
+		margin-right: 5px;
+		
+		border: 2px solid $primary;
+		border-radius: 4px;
+	}
+	
+	&__checkbox:checked + &__span::before {
+		background: url('../../public/checkbox.svg') center/contain no-repeat;
+		
+		border-color: transparent;
+		
+		animation: pop .2s ease-in-out;
+	}
+	
+	&__checkbox:focus + &__span::before {
+		outline: 2px;
+	}
+	
+	&__span {
+		margin-right: 12px;
+	}
 	
 	&__description {
 		@include font($font-family-montserrat, $fs-s, $fw-medium);
 		line-height: 1.28;
 		color: #B7BFD1;
+		user-select: none;
+		
+		a {
+			color: $primary;
+		}
+	}
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(0);
+	}
+	
+	90% {
+		transform: scale(1.2);
+	}
+	
+	100% {
+		transform: scale(1);
 	}
 }

@@ -25,5 +25,9 @@
 		&::placeholder {
 			@include font($font-family-montserrat, $fs-m, $fw-medium);
 		}
+		
+		@include media($media-phone) {
+			width: 100%;
+		}
 	}
 }

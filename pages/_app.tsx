@@ -1,6 +1,8 @@
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -12,6 +14,13 @@ export default function App({ Component, pageProps }: AppProps) {
 				<link rel='icon' type='img/svg' sizes='32x32' href='logo.svg' />
 			</Head>
 			<Component {...pageProps} />
+			<ToastContainer
+				position={'bottom-right'}
+				hideProgressBar={false}
+				closeOnClick
+				rtl={false}
+				theme={'dark'}
+			/>
 		</>
 	);
 }
