@@ -5,20 +5,21 @@
 	margin-bottom: 100px;
 	
 	&__title {
+		font-size: 96px;
 		margin-bottom: 100px;
 		
 		@include media($media-tablet) {
-			font-size: 36px;
-			margin-bottom: 88px;
+			font-size: 36px !important;
+			margin-bottom: 88px !important;
 		}
 		
 		@include media($media-phone) {
-			font-size: 24px;
-			margin-bottom: 56px;
+			font-size: 24px !important;
+			margin-bottom: 56px !important;
 		}
 		
 		@include media($media-small) {
-			margin-bottom: 48px;
+			margin-bottom: 48px !important;
 		}
 	}
 	
@@ -58,12 +59,16 @@
 		margin-bottom: 60px;
 		
 		@include media($media-phone) {
-			font-size: 20px;
+			font-size: 20px !important;
 		}
 		
 		
 		p {
 			margin-bottom: 20px;
+			
+			@include media($media-phone) {
+				font-size: 20px !important;
+			}
 		}
 	}
 }

@@ -6,11 +6,11 @@ export interface ISocialList {
 }
 
 export const SocialLinks: ISocialList[] = [
-	{ id: '1', name: 'Вконтакте', link: 'https://vk.com/yeppiewhat', img: '/youtube.svg' },
+	{ id: '1', name: 'Вконтакте', link: 'https://vk.com/yeppiewhat', img: '/vk.svg' },
 	{
 		id: '2',
 		name: 'Youtube',
 		link: 'https://www.youtube.com/channel/UC411tAkcTEzh6j9aspNZdjA',
-		img: '/vk.svg',
+		img: '/youtube.svg',
 	},
 ];

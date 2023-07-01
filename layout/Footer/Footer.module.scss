@@ -1,0 +1,123 @@
+@import "styles/vars";
+@import "styles/mixins";
+
+.footer {
+	&__container {
+	
+	}
+	
+	&__divider {
+		margin-bottom: 30px;
+	}
+	
+	&__logo {
+		display: inline-block;
+		
+		margin-bottom: 20px;
+	}
+	
+	&__block {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		
+		margin-bottom: 67px;
+		
+		@include media($media-tablet) {
+		}
+		
+		@include media($media-phone) {
+			grid-template-columns: 200px 1fr;
+			gap: 20px;
+		}
+		
+		@include media($media-small) {
+			grid-template-columns: 1fr;
+			gap: 60px;
+		}
+	}
+	
+	&__left {
+	
+	}
+	
+	&__right {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		
+		&-top {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			gap: 50px;
+			
+			@include media($media-tablet) {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 30px;
+			}
+			
+			@include media($media-phone) {
+			}
+			
+			@include media($media-small) {
+			}
+		}
+		
+		&-bottom {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 19px 172px;
+			
+			@include media($media-tablet) {
+				gap: 20px 40px;
+			}
+			
+			@include media($media-phone) {
+				grid-template-columns: 1fr;
+			}
+			
+			@include media($media-small) {
+			}
+			
+			p {
+				a {
+					color: $primary;
+				}
+			}
+		}
+	}
+	
+	&__socials {
+		height: 40px;
+		
+		@include media($media-tablet) {
+		}
+		
+		@include media($media-phone) {
+			height: auto;
+		}
+		
+		@include media($media-small) {
+		}
+		
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+			
+			@include media($media-tablet) {
+			}
+			
+			@include media($media-phone) {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 10px;
+				
+			}
+			
+			@include media($media-small) {
+			}
+		}
+	}
+}

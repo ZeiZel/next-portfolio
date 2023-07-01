@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import cn from 'classnames';
 import styles from './SocialList.module.scss';
 import { ISocialListProps } from './SocialList.props';
 import { ISocialList } from '@/helpers';
 import { Paragraph } from '@/components';
 
-export const SocialList = ({ socialList }: ISocialListProps) => (
-	<ul className={styles.social}>
+export const SocialList = ({ socialList, className, ...props }: ISocialListProps) => (
+	<ul className={cn(className, styles.social)} {...props}>
 		{socialList.map((link: ISocialList) => (
 			<li key={link.id} className={styles.social__item}>
 				<a href={link.link} className={styles.social__link}>
