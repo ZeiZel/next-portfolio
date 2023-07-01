@@ -33,6 +33,7 @@ export const ContactForm = () => {
 
 		// очистит все поля формы
 		formRef.current.reset();
+		setConfirmRules(false);
 	};
 
 	return (
